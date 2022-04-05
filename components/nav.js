@@ -38,15 +38,15 @@ function Nav() {
     }
 
 
-    const [scroll, useScroll] = React.useState(false);
+    const [scroll, setScroll] = React.useState(false);
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
             const offset = window.scrollY;
-            if (offset > 150) {
-                useScroll(true);
+            if (offset >= 150) {
+                setScroll(true);
             } else {
-                useScroll(false);
+                setScroll(false);
             }
         });
     }, []);
