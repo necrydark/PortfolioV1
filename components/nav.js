@@ -38,7 +38,7 @@ function Nav() {
     }
 
 
-    const [scroll, useScroll] = useState(false);
+    const [scroll, useScroll] = React.useState(false);
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
