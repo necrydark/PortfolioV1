@@ -12,7 +12,7 @@ function Contact() {
     return (
         <form onSubmit={handleSubmit} className='flex flex-col container p-6'>
             <label htmlFor="email" className='text-white'>Email Address</label>
-            <input id="email" className='p-3 my-3 bg-[#9867C5] rounded-md ' type="email" name="email" placeholder='janedoe@mail.com' />
+            <input id="email" className='p-3 my-3 bg-[#9867C5] rounded-md text-white' type="email" name="email" placeholder='janedoe@mail.com' />
             <ValidationError prefix="Email" field="email" errors={state.errors} />
             <label htmlFor="email" className=' text-white'>Message</label>
 
