@@ -46,9 +46,6 @@ export default function Home() {
           <p>
             Image
           </p>
-          <p>
-            dummy text
-          </p>
         </div>
       </section>
       <Wave fill={"9867C5"} bg={"BE93D4"} />
