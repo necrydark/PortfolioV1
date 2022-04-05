@@ -44,11 +44,11 @@ export default function Home() {
       </section>
       <Wave fill={"BE93D4"} bg={"9867C5"} />
       <section id="about" className='min-h-screen bg-[#BE93D4] py-20'>
-        <div className='m-auto max-w-7xl grid grid-cols-2 container'>
-          <p>
+        <div className='m-auto max-w-7xl gap-5 grid sm:grid-cols-12 grid-cols-1 container sm:grid-rows-none grid-rows-1'>
+          <p className='sm:col-span-6 col-span-12'>
             Image
           </p>
-          <p>
+          <p className='sm:col-span-6 col-span-12'>
             dummy text
           </p>
         </div>
