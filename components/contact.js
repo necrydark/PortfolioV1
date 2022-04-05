@@ -16,7 +16,7 @@ function Contact() {
             <ValidationError prefix="Email" field="email" errors={state.errors} />
             <label htmlFor="email" className=' text-white'>Message</label>
 
-            <textarea id="message" name="message" className='p-3 my-3 max-h-48 resize-y rounded-md bg-[#9867C5] border text-white ' placeholder='Leave a message....' />
+            <textarea id="message" name="message" className='p-3 my-3 max-h-48 resize-y rounded-md bg-[#9867C5]  text-white ' placeholder='Leave a message....' />
             <ValidationError prefix="Message" field="message" errors={state.errors} />
             <button type='submit' disabled={state.submitting} className="bg-[#BE93D4] hover:bg-purple-600 transition-colors duration-300 text-white w-52 font-bold py-2 text-center px-4 rounded mx-auto items-center">
                 Submit
