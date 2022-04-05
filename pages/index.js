@@ -34,8 +34,8 @@ export default function Home() {
           <p className='m-0 text-white sm:text-3xl text-xl text-center '>
             I am a software engineering student and aspiring web developer
           </p>
-          <button class="bg-[#BE93D4] hover:bg-purple-600 transition-colors duration-300 text-white font-bold py-2 px-4 rounded inline-flex mt-4 items-center">
-            <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
+          <button className="bg-[#BE93D4] hover:bg-purple-600 transition-colors duration-300 text-white font-bold py-2 px-4 rounded inline-flex mt-4 items-center">
+            <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
             <span>Download CV</span>
           </button>
         </div>
