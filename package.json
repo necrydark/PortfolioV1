@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.4",
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",
+    "@sendgrid/mail": "^7.6.2",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0"
