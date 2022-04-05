@@ -21,17 +21,6 @@ function Nav() {
     ])
 
 
-    const [scroll, useScroll] = useState(false);
-
-    const classOnScroll = () => {
-        const value = window.scrollY;
-        if (value >= 150) {
-            useScroll(true);
-        } else {
-            useScroll(false)
-        }
-    }
-
 
 
 
@@ -48,9 +37,19 @@ function Nav() {
 
     }
 
-    if (typeof window !== "undefined") {
-        window.addEventListener('scroll', classOnScroll);
-    }
+
+    const [scroll, useScroll] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            const offset = window.scrollY;
+            if (offset > 150) {
+                useScroll(true);
+            } else {
+                useScroll(false);
+            }
+        });
+    }, []);
 
     return (
 
@@ -73,7 +72,7 @@ function Nav() {
                                 </div>
                                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                                     <div className="flex-shrink-0 flex items-center text-center text-white font-bold text-xl">
-                                        <a href='/'>Michael C</a>
+                                        <Link href='/'>Michael C</Link>
                                     </div>
                                     <div className="hidden sm:block sm:ml-6">
                                         <div className="flex font-bold  space-x-4 ">
