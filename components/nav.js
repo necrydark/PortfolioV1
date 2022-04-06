@@ -71,8 +71,8 @@ function Nav() {
                                     </Disclosure.Button>
                                 </div>
                                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
-                                    <div className="flex-shrink-0 flex items-center text-center text-white font-bold text-xl">
-                                        <Link href='/'>Michael C</Link>
+                                    <div className="flex-shrink-0 flex items-center text-center text-white   text-xl">
+                                        <Link href='#home'>Michael C</Link>
                                     </div>
                                     <div className="hidden sm:block sm:ml-6">
                                         <div className="flex font-bold  space-x-4 ">
@@ -82,7 +82,7 @@ function Nav() {
                                                     key={item.name}
                                                     href={item.href}
                                                     className={classNames(
-                                                        item.current ? ' text-white hover:bg-[#9867C5] hover:text-white font-bold' : ' font-bold text-white hover:bg-[#9867C5] hover:text-white',
+                                                        item.current ? ' text-white hover:bg-[#9867C5] hover:text-white font-bold transition-colors duration-300ms' : ' font-bold text-white transition-colors duration-300ms hover:bg-[#9867C5] hover:text-white',
                                                         'px-3 py-2 rounded-md text-sm font-medium'
                                                     )}
                                                     aria-current={item.current ? 'section' : undefined}
@@ -116,7 +116,7 @@ function Nav() {
                                             as="a"
                                             href={item.href}
                                             className={classNames(
-                                                item.current ? 'text-white hover:bg-[#9867C5] hover:text-white font-bold' : 'text-white font-bold hover:bg-[#9867C5] hover:text-white',
+                                                item.current ? 'text-white hover:bg-[#9867C5] hover:text-white font-bold transition-colors duration-300ms' : 'text-white font-bold transition-colors duration-300ms hover:bg-[#9867C5] hover:text-white',
                                                 'block px-3 py-2 rounded-md text-base font-medium'
                                             )}
                                             aria-current={item.current ? 'section' : undefined}
