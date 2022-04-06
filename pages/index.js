@@ -27,13 +27,13 @@ export default function Home() {
 
       <Nav />
 
-      <section id="home" className='min-h-screen bg-[#9867C5] py-40'>
+      <section id="home" className='min-h-fit bg-[#9867C5] py-40'>
         <div className="container m-auto max-w-7xl flex justify-center h-[50vh] items-center flex-col">
-          <div className='sm:flex-row flex'>
-            <p className='flex sm:text-3xl sm:!leading-[5rem] m-0 text-xl leading-10 text-white'>Hey, my name is</p>
-            <h1 className='text-white pl-2 sm:text-6xl text-3xl'>Michael Connor</h1>
+          <div className='md:flex-row flex'>
+            <p className='flex md:text-3xl md:!leading-[5rem] m-0 text-xl leading-10 text-white'>Hey, my name is</p>
+            <h1 className='text-white pl-2 md:text-6xl text-3xl'>Michael Connor</h1>
           </div>
-          <p className='m-0 text-white sm:text-3xl text-xl text-center '>
+          <p className='m-0 text-white md:text-3xl text-xl text-center '>
             I am a software engineering student and aspiring web developer
           </p>
           <button className="bg-[#BE93D4] hover:bg-purple-600 transition-colors duration-300 text-white font-bold py-2 px-4 rounded inline-flex mt-4 items-center">
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
       </section>
       <Wave fill={"BE93D4"} bg={"9867C5"} />
-      <section id="about" className='min-h-screen bg-[#BE93D4] py-20'>
+      <section id="about" className='min-h-fit bg-[#BE93D4]'>
         <div className='m-auto max-w-7xl gap-5 grid sm:grid-cols-12 grid-cols-1 container sm:grid-rows-none grid-rows-1'>
           <p className='sm:col-span-6 col-span-12'>
             Image
@@ -55,12 +55,16 @@ export default function Home() {
       </section>
       <Wave fill={"9867C5"} bg={"BE93D4"} />
       <section id="projects" className='h-[80vh] bg-[#9867C5] py-20'>
-        {array.map((item, i) => (
-          <Card item={item} key={i} />
-        ))}
+        <div className='container flex flex-col'>
+          <div className='grid md:grid-cols-2 '>
+            {array.map((item, i) => (
+              <Card item={item} key={i} />
+            ))}
+          </div>
+        </div>
       </section>
       <Wave fill={"BE93D4"} bg={"9867C5"} />
-      <section id="about" className='h-[80vh] bg-[#BE93D4] py-20'>
+      <section id="contact" className='h-[80vh] bg-[#BE93D4] py-20'>
         <FormspreeProvider project="1914443541589786412">
           <Contact />
         </FormspreeProvider>

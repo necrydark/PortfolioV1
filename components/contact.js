@@ -22,10 +22,11 @@ function Contact() {
                 Submit
             </button>
             <ValidationError errors={state.errors} />
-            <button className="bg-[#BE93D4] hover:bg-purple-600 transition-colors duration-300 text-white w-44 font-bold py-2 text-center px-4 rounded items-center">
-                <Link href="mailto:michaelkconnor.02@gmail.com" >Email me here!</Link>
-            </button>
-        </form>
+            <div className='text-white flex flex-row items-center'>Or email me at
+                <Link href="mailto:michaelkconnor.02@gmail.com"><p className="hover:text-purple-900 ml-2 transition-colors duration-300 cursor-pointer" >michaelkconnor.02@gmail.com</p>
+                </Link>
+            </div >
+        </form >
 
     )
 }
