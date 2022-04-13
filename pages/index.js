@@ -46,8 +46,8 @@ export default function Home() {
       <section id="about" className='min-h-fit bg-[#BE93D4]'>
         <div className='container'>
           <h1 className='text-5xl text-white p-4'>About Me</h1>
-          <p className='text-white p-2'>Hello, I'm Michael Connor. I'm a full time university student studying Software Engineering and also study web development on the side. I have a strong passion for both software and website development, and currently have experience creating both software and websites using JavaScript / NextJs / Reactjs / Java and some other frameworks</p>
-          <h2 className='text-white p-2'>Technologies I've worked with:</h2>
+          <p className='text-white p-2'>Hello, I&apos;m Michael Connor. I&apos;m a full time university student studying Software Engineering and also study web development on the side. I have a strong passion for both software and website development, and currently have experience creating both software and websites using JavaScript / NextJs / Reactjs / Java and some other frameworks</p>
+          <h2 className='text-white p-2'>Technologies I&apos;ve worked with:</h2>
           <ul className='flex flex-wrap gap-4 my-3 p-2 text-white'>
             <li >HTML5</li>
             <li>CSS3</li>
