@@ -13,10 +13,10 @@ import Link from 'next/link'
 export default function Home() {
 
 
-  const array = [
-    { title: 'Wagwan', content: 'This is content', date: '2022/03/01', author: 'Me kid' },
-    { title: 'Wagwan 2', content: 'This is content 2', date: '2022/03/01 2', author: 'Me kid 2' }
-  ];
+
+
+
+
   return (
     <div className='scroll-smooth'>
       <Head>
@@ -44,24 +44,41 @@ export default function Home() {
       </section>
       <Wave fill={"BE93D4"} bg={"9867C5"} />
       <section id="about" className='min-h-fit bg-[#BE93D4]'>
-        <div className='m-auto max-w-7xl gap-5 grid sm:grid-cols-12 grid-cols-1 container sm:grid-rows-none grid-rows-1'>
+        <div className='container'>
+          <h1 className='text-5xl text-white p-4'>About Me</h1>
+          <p className='text-white p-2'>Hello, I'm Michael Connor. I'm a full time university student studying Software Engineering and also study web development on the side. I have a strong passion for both software and website development, and currently have experience creating both software and websites using JavaScript / NextJs / Reactjs / Java and some other frameworks</p>
+          <h2 className='text-white p-2'>Technologies I've worked with:</h2>
+          <ul className='flex flex-wrap gap-4 my-3 p-2 text-white'>
+            <li >HTML5</li>
+            <li>CSS3</li>
+            <li>TailwindCSS</li>
+            <li>NextJs</li>
+            <li>NodeJS</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>ReactJS</li>
+            <li>MongoDB</li>
+            <li>SQL</li>
+
+          </ul>
+        </div>
+        {/* <div className='m-auto max-w-7xl gap-5 grid sm:grid-cols-12 grid-cols-1 container sm:grid-rows-none grid-rows-1'>
           <p className='sm:col-span-6 col-span-12'>
             Image
           </p>
           <p className='sm:col-span-6 col-span-12'>
             dummy text
           </p>
-        </div>
+        </div> */}
       </section>
       <Wave fill={"9867C5"} bg={"BE93D4"} />
       <section id="projects" className='h-[80vh] bg-[#9867C5] py-20'>
-        <div className='container flex flex-col'>
-          <div className='grid md:grid-cols-2 '>
-            {array.map((item, i) => (
-              <Card item={item} key={i} />
-            ))}
-          </div>
-        </div>
+
+        <Card />
+
+        {/* <button onClick={showMoreItems} className="bg-[#BE93D4] hover:bg-purple-600 transition-colors duration-300 text-white font-bold py-2 px-4 w-[7.1rem] text-center
+          mx-auto rounded inline-flex mt-4 items-center"> Load More</button> */}
+
       </section>
       <Wave fill={"BE93D4"} bg={"9867C5"} />
       <section id="contact" className='h-[80vh] bg-[#BE93D4] py-20'>
