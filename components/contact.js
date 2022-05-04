@@ -23,7 +23,7 @@ function Contact() {
             </button>
             <ValidationError errors={state.errors} />
             <div className='text-white flex flex-row items-center'>Or email me at
-                <Link href="mailto:michaelkconnor.02@gmail.com"><p className="hover:text-purple-900 ml-2 transition-colors duration-300 cursor-pointer b" >michaelkconnor.02@gmail.com</p>
+                <Link href="mailto:michaelkconnor.02@gmail.com"><p className="hover:text-purple-900 ml-2 transition-colors duration-300 cursor-pointer" >michaelkconnor.02@gmail.com</p>
                 </Link>
             </div >
         </form >
