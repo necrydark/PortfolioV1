@@ -6,8 +6,10 @@ import { projects } from '../constants/constants'
 const Card = () => (
 
     
-    <div div className='container flex flex-col' >
-        <div className='grid md:grid-cols-2 gap-4 '>
+    <div className='container mx-auto 2xl:w-3/4 lg:w-3/4'>
+        <div className='flex flex-col '>
+     
+        <div className='grid md:grid-cols-2 gap-4  '>
             {
                 projects.cardData.map((p, i) => {
                     return (
@@ -57,7 +59,8 @@ const Card = () => (
                 })
             }
         </div>
-
+       
+        </div>
     </div >
 
 );
