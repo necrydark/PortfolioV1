@@ -9,7 +9,7 @@ const Card = () => (
     <div className='container mx-auto 2xl:w-3/4 lg:w-3/4'>
         <div className='flex flex-col '>
      
-        <div className='grid md:grid-cols-2 gap-4  '>
+        <div className='grid md:grid-cols-2 gap-10 place-content-center w-fit mx-auto '>
             {
                 projects.cardData.map((p, i) => {
                     return (
