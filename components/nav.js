@@ -54,11 +54,11 @@ function Nav() {
     return (
 
         <header >
-            <Disclosure as="nav" id='scrollNav' className="bg-[#BE93D4] fixed z-50 w-full transition-all duration-300 shadow-md">
+            <Disclosure as="nav" id='scrollNav' className={scroll ? "bg-[#BE93D4] fixed z-50 w-full transition-all duration-300 shadow-md" : "bg-[#BE93D4] fixed z-50 w-full transition-all duration-300 "}>
                 {({ open }) => (
                     <>
                         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 leading-[80px]">
-                            <div className={scroll ? "relative flex items-center justify-between h-12 leading-[40px] transition-all duration-300 " : " transition-all duration-300 relative flex items-center justify-between h-20 leading-[80px]"} >
+                            <div className={scroll ? "relative flex items-center justify-between h-12 leading-[40px] transition-all duration-300" : " transition-all duration-300 relative flex items-center justify-between h-20 leading-[80px]"} >
                                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                     {/* Mobile menu button*/}
                                     <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-purple-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -97,16 +97,15 @@ function Nav() {
                         </div>
 
 
-                        <Disclosure.Panel className="sm:hidden">
+                        <Disclosure.Panel className="sm:hidden transition-all">
                             <Transition
-
                                 show={open}
-                                enter=" transition-all duration-150 ease-out"
-                                enterFrom="transform opacity-0  h-0"
-                                enterTo="transform opacity-100 h-44"
-                                leave="duration-100 transition-all ease-in"
-                                leaveFrom="opacity-100 transform  h-44"
-                                leaveTo=" transform  h-0"
+                                enter="transition duration-100 ease-out"
+                                enterFrom="transform scale-95 opacity-0"
+                                enterTo="transform scale-100 opacity-100"
+                                leave="transition duration-75 ease-out"
+                                leaveFrom="transform scale-100 opacity-100"
+                                leaveTo="transform scale-95 opacity-0"
                             >
                                 <div className="px-2 pt-2 pb-3 space-y-1 ">
                                     {navigation.map((item) => (
@@ -116,7 +115,7 @@ function Nav() {
                                             as="a"
                                             href={item.href}
                                             className={classNames(
-                                                item.current ? 'text-white hover:bg-[#9867C5] hover:text-white font-bold transition-colors duration-300ms' : 'text-white font-bold transition-colors duration-300ms hover:bg-[#9867C5] hover:text-white',
+                                                item.current ? 'text-white hover:bg-[#9867C5] hover:text-white font-bold transition-colors duration-700' : 'text-white font-bold transition-colors duration-700 hover:bg-[#9867C5] hover:text-white',
                                                 'block px-3 py-2 rounded-md text-base font-medium'
                                             )}
                                             aria-current={item.current ? 'section' : undefined}

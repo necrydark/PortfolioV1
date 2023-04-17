@@ -6,6 +6,8 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  scrollbar-color: dark;
+
 }
 
 
@@ -42,6 +44,7 @@ header a {
   margin: auto;
   overflow: auto;
   padding: 0 10px;
+
 }
 
 .btn {
@@ -147,4 +150,3 @@ ol {
 
   }
 }
-
