@@ -1,18 +1,17 @@
 export const projects = {
     cardData: [{
         title: 'Date A Live Community Bot',
-        content: 'Discord Bot used by the DAL Community Server, with working levelling, economy and moderation systems in place. The levelling and economy system utilize the usage of MongoDB to store details.',
+        content: 'Discord JS bot used for an anime community server.',
         languages: ['Mongoose', 'JavaScript', 'Node', 'SQLite'],
         features: ['Economy', 'Leveling', 'Moderation', 'Reaction Roles', 'Fun'],
         links: 'https://github.com/necrydark/DALBot',
         id: 0
     },
     {
-        title: 'Makima Bot',
-        content: "Discord Bot used by the Chainsaw Man Community Server, with different APIs implemented to utilize the theme of the server with bot permissions enabled and slash commands.",
-        languages: ['DiscordJS', 'JavaScript', 'REST', 'waifu.pics', 'kitsu.io'],
-        features: ['Moderation', 'Anime / Manga Info', 'Anime / Manga Pictures', 'Ticket System', 'Customisation', 'Avatar Checker'],
-        links: 'https://github.com/necrydark/makimabot',
+        title: 'Wagwan ',
+        content: 'Discord JS bot used for an anime community serverDiscord JS bot used for an anime community serverDiscord JS bot used for an anime community serverDiscord JS bot used for an anime community serverDiscord JS bot used for an anime community server',
+        languages: ['Mongoose', 'JavaScript', 'Node', 'SQLite'],
+        links: 'https://www.youtube.com/watch?v=fgvCf2groqc',
         id: 1
     },
     {

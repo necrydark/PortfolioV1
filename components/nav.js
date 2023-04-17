@@ -54,7 +54,7 @@ function Nav() {
     return (
 
         <header >
-            <Disclosure as="nav" id='scrollNav' className={scroll ? "bg-[#BE93D4] fixed z-50 w-full transition-all duration-300 shadow-md" : "bg-[#BE93D4] fixed z-50 w-full transition-all duration-300 "}>
+            <Disclosure as="nav" id='scrollNav' className="bg-[#BE93D4] fixed z-50 w-full transition-all duration-300 shadow-md">
                 {({ open }) => (
                     <>
                         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 leading-[80px]">

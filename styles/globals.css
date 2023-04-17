@@ -18,7 +18,10 @@ body {
   scroll-behavior: smooth;
 }
 
-
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
 
 p {
   margin: 15px 0;
