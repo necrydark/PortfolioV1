@@ -3,24 +3,38 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "i18nexus pull && next dev",
+    "build": "i18nexus pull && next build",
+    "start": "i18nexus pull && next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.18",
+    "@chakra-ui/react": "^2.5.5",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@formspree/react": "^2.2.4",
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",
     "@sendgrid/mail": "^7.6.2",
+    "framer-motion": "^10.12.4",
+    "fs": "^0.0.1-security",
+    "i18next": "^22.4.15",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-http-backend": "^2.2.0",
     "next": "12.1.4",
+    "next-i18next": "^13.2.2",
+    "next-themes": "^0.2.1",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "react-i18next": "^12.2.0",
+    "react-icons": "^4.8.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.4",
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.4",
+    "i18nexus-cli": "^3.1.0",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23"
   }
