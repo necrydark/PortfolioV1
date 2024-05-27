@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import Link from 'next/link'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react';
+import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
 import en from '../public/locales/en/home.json';
 import ja from '../public/locales/ja/home.json';
-import { useTheme } from 'next-themes';
-import { SunIcon, MoonIcon } from '@chakra-ui/icons'
-import { AnimatePresence, motion } from 'framer-motion'
-import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import ThemeSwitcher from './ThemeSwitcher';
 
 
@@ -103,7 +103,7 @@ export default function Nav() {
                                                 <span className="block w-8 h-0.5 bg-white"></span>
                                                 <span className="block w-5 h-0.5 bg-white"></span> */}
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-white" viewBox="0 0 24 24" stroke="white">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
                                                 </svg>
                                             </div>
                                         )}
