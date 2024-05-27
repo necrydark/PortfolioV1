@@ -17,7 +17,7 @@ const Home = () => {
   const { locale } = router;
   const t = locale === 'en' ? en : ja;
 
-  const skills = ['HTML5', 'CSS3', 'TailwindCSS', 'NextJS', 'NodeJS', 'JavaScript', 'Java', 'React', 'MongoDB', 'SQL', 'C#', 'Adobe XD', 'Git', 'C++']
+  const skills = ['HTML5', 'CSS3', 'TailwindCSS', 'NextJS', "Typescript", "Prisma", "Supabase", 'NodeJS', 'JavaScript', 'Java', 'React', 'MongoDB', 'SQL', 'C#', 'Adobe XD', 'Git', 'C++']
 
 
   return (

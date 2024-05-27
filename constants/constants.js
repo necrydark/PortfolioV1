@@ -62,7 +62,7 @@ export const projects = {
     {
         title: 'GCWiki',
         content: 'GCWiki is a project I am currently working on which is a database for the game 7 Deadly Sins Grand Cross. It is a work in progress and is currently being developed using NextJS and Tailwind CSS.',
-        languages: ['NextJS', 'Tailwind CSS', 'Formspree', 'MongoDB'],
+        languages: ['NextJS', 'Tailwind CSS', 'Resend', 'Supabase', "Typescript", "Sanity", "Prisma", "Nextauth", "Framer Motion"],
         features: ['Searching', 'Character Builds', 'Team Building', 'Updates', 'News', "Customisable Profile", "Admin Dashboard", "Friend System"],
         // github: 'https://github.com/necrydark/gcdatabase',
         id: 8
@@ -70,14 +70,14 @@ export const projects = {
     {
         title: "Sam Smith Decorating",
         content: "Sam Smith Decorating is a client project I did for a family business that wanted to extend their business to take online requests.",
-        languages: ["NextJS", 'Supabase', 'Prisma', "TailwindCSS", 'Sanity', 'Resend', 'Framer Motion'],
+        languages: ["NextJS", 'Supabase', 'Prisma', "TailwindCSS", 'Sanity', 'Resend', 'Framer Motion', "Typescript"],
         features: ['Contact Form', "Reviews", 'Blog System', "Gallery"],
         links: "https://www.samsmithdecorating.co.uk/",
     },
     {
         title: "LingoLearn",
         content: "LingoLearn is a language learning project in which it gives users lessons in their desired lessons",
-        languages: ["Supabase", "NextJS", "TailwindCSS", "Prisma", "Sanity", "Resend", "Framer Motion", "Clerk", "DeepL", "ElevenLabs", "React Three"],
+        languages: ["Supabase", "NextJS", "TailwindCSS", "Prisma", "Sanity", "Resend", "Framer Motion", "Clerk", "DeepL", "ElevenLabs", "React Three", "Typescript"],
         features: ["Real Time Translations", "Lessons", "Practice Lessons", "Blog System", "Admin Dashboard", "Profile System"],
         links: "https://lingo-learn.vercel.app/"
     }],
