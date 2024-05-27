@@ -77,7 +77,8 @@ export const projects = {
     {
         title: "LingoLearn",
         content: "LingoLearn is a language learning project in which it gives users lessons in their desired lessons",
-        languages: ["Supabase", "NextJS", "TailwindCSS", "Prisma", "Sanity", "Resend", "Framer Motion", "Clerk", "DeepL", "ElevenLabs"],
-        features: ["Real Time Translations", "Lessons", "Practice Lessons", "Blog System", "Admin Dashboard", "Profile System"]
+        languages: ["Supabase", "NextJS", "TailwindCSS", "Prisma", "Sanity", "Resend", "Framer Motion", "Clerk", "DeepL", "ElevenLabs", "React Three"],
+        features: ["Real Time Translations", "Lessons", "Practice Lessons", "Blog System", "Admin Dashboard", "Profile System"],
+        links: "https://lingo-learn.vercel.app/"
     }],
 };
