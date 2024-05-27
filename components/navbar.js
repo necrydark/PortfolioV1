@@ -8,8 +8,8 @@ import ja from '../public/locales/ja/home.json';
 import { useTheme } from 'next-themes';
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
 import { AnimatePresence, motion } from 'framer-motion'
-
 import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import ThemeSwitcher from './ThemeSwitcher';
 
 
 
@@ -22,21 +22,23 @@ export default function Nav() {
     const { locale } = router;
     const t = locale === 'en' ? en : ja;
 
-    const { systemTheme, theme, setTheme } = useTheme();
+    // const { systemTheme, theme, setTheme } = useTheme();
 
-    const renderThemeChanger = () => {
-        const currentTheme = theme === 'system' ? systemTheme : theme;
+    // const renderThemeChanger = () => {
+    //     const currentTheme = theme === 'system' ? systemTheme : theme;
 
-        if (currentTheme === 'dark') {
-            return (
-                <SunIcon onClick={() => setTheme('light')} aria-label='Light Theme Toggle' className=' px-0 w-7 h-7 text-white' role='button' />
-            )
-        } else {
-            return (
-                <MoonIcon onClick={() => setTheme('dark')} aria-label='Dark Theme Toggle' className='px-0  w-7 h-7 text-white' role='button' />
-            )
-        }
-    }
+    //     if (currentTheme === 'dark') {
+    //         return (
+    //                     <SunIcon onClick={() => setTheme('light')} aria-label='Light Theme Toggle' className=' px-0 w-7 h-7 text-white focus:text-white hover:text-white' role='button' />
+
+    //         )
+    //     } else {
+    //         return (
+    //                 <MoonIcon onClick={() => setTheme('dark')} aria-label='Dark Theme Toggle' className=' px-0 w-7 h-7 text-white focus:text-white hover:text-white' role='button' />
+
+    //         )
+    //     }
+    // }
 
     const changeLanguage = (e) => {
         const locale = e.target.value;
@@ -47,29 +49,25 @@ export default function Nav() {
         });
     };
 
-    //change name of the links based on what locale was selected
+    // const [navigation, setNavigation] = useState([
+    //     { name: `${t.home}`, href: '#home', current: true, },
+    //     { name: t.about, href: '#about', current: false, },
+    //     { name: t.projects, href: '#projects', current: false, },
+    //     { name: t.contact, href: '#contact', current: false, },
+    // ])
 
+    // function toggleActive(active) {
+    //     const index = navigation.findIndex(x => x.name === active);
+    //     setNavigation(navigation.map((item, i) => {
+    //         if (i === index) {
+    //             return { ...item, current: true }
+    //         } else {
 
-    const [navigation, setNavigation] = useState([
-        //change the name of the link based on langauge selected
-        { name: `${t.home}`, href: '#home', current: true, },
-        { name: t.about, href: '#about', current: false, },
-        { name: t.projects, href: '#projects', current: false, },
-        { name: t.contact, href: '#contact', current: false, },
-    ])
+    //             return { ...item, current: false }
+    //         }
+    //     }))
 
-    function toggleActive(active) {
-        const index = navigation.findIndex(x => x.name === active);
-        setNavigation(navigation.map((item, i) => {
-            if (i === index) {
-                return { ...item, current: true }
-            } else {
-
-                return { ...item, current: false }
-            }
-        }))
-
-    }
+    // }
 
     const [scroll, setScroll] = React.useState(false);
 
@@ -87,7 +85,7 @@ export default function Nav() {
     return (
 
         <header >
-            <Disclosure as="nav" id='scrollNav' className="cyberpunk-nav fixed z-50 w-full transition-all duration-300 shadow-md">
+            <Disclosure as="nav" id='scrollNav' className="cyberpunk-nav dark:bg-[#0f0f0f] bg-[#ee3453] fixed z-50 w-full transition-all ease-in duration-300 shadow-md border-b-2 dark:border-[#fae800] border-white">
                 {({ open }) => (
                     <>
                         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 !leading-[0px] ">
@@ -99,28 +97,41 @@ export default function Nav() {
                                         {open ? (
                                             <XIcon className="block h-6 w-6 text-white" aria-hidden="true" />
                                         ) : (
-                                            <MenuIcon className="block h-6 w-6 text-white" aria-hidden="true" />
+                                            // <MenuIcon className="block h-6 w-6 text-white" aria-hidden="true" />
+                                            <div className="space-y-2" aria-hidden="true" >
+                                                {/* <span className="block w-8 h-0.5 bg-white"></span>
+                                                <span className="block w-8 h-0.5 bg-white"></span>
+                                                <span className="block w-5 h-0.5 bg-white"></span> */}
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-white" viewBox="0 0 24 24" stroke="white">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                                                </svg>
+                                            </div>
                                         )}
                                     </Disclosure.Button>
                                 </div>
                                 <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                                     <div className="flex-shrink-0 flex items-center text-center text-white text-xl font-bold hover:bg=[#ee3453]">
-                                        <li className='transitions-colors duration-700 hover:bg-[#ee3453] hover:text-white block px-3 py-2 rounded-md text-base'>
+                                        {/* <li className='transitions-colors duration-700 hover:bg-[#0f0f0f] hover:text-white block px-3 py-2 rounded-md text-base'> */}
+                                        <li className={`${locale === 'en' ? 'text-white font-bold transition-colors duration-700 dark:hover:bg-[#fae800] hover:bg-[#0f0f0f] hover:text-white block px-3 py-2 rounded-md text-base dark:hover:text-black' : 'text-white dark:hover:text-black font-bold transition-colors duration-700 dark:hover:bg-[#fae800] hover:bg-[#0f0f0f] hover:text-white block px-3 py-2 rounded-md text-base text-[10px]'}`}>
                                             <Link href='#home' >{t.name}</Link>
                                         </li>
                                     </div>
                                     <div className="hidden sm:block sm:ml-6 ">
                                         <div className="flex font-bold  space-x-4 ">
-                                            <li className="text-white font-bold transition-colors duration-700 hover:bg-[#ee3453] hover:text-white block px-3 py-2 rounded-md text-base">
+                                            {/* <li className="text-white font-bold transition-colors duration-700 dark:hover:bg-[#fae800] hover:bg-[#0f0f0f] hover:text-white block px-3 py-2 rounded-md text-base"> */}
+                                            <li className={`${locale === 'en' ? 'text-white font-bold transition-colors duration-700 dark:hover:bg-[#fae800] hover:bg-[#0f0f0f] !dark:hover:text-black hover:text-white block px-3 py-2 rounded-md text-base' : 'text-white font-bold transition-colors dark:hover:text-black duration-700 dark:hover:bg-[#fae800] hover:bg-[#0f0f0f] hover:text-white block px-3 py-2 rounded-md text-base text-[11px]'}`}>
                                                 <Link href='/'>{t.home}</Link>
                                             </li>
-                                            <li className="text-white font-bold transition-colors duration-700 hover:bg-[#ee3453] hover:text-white block px-3 py-2 rounded-md text-base">
+                                            <li className={`${locale === 'en' ? 'text-white font-bold transition-colors duration-700 dark:hover:bg-[#fae800] hover:bg-[#0f0f0f] hover:text-white block px-3 py-2 rounded-md text-base dark:hover:text-black' : 'text-white font-bold transition-colors duration-700 dark:hover:bg-[#fae800] dark:hover:text-black hover:bg-[#0f0f0f] hover:text-white block px-3 py-2 rounded-md text-base text-[11px]'}`}>
+
                                                 <Link href='#about'>{t.about}</Link>
                                             </li>
-                                            <li className="text-white font-bold transition-colors duration-700 hover:bg-[#ee3453] hover:text-white block px-3 py-2 rounded-md text-base">
+                                            <li className={`${locale === 'en' ? 'text-white font-bold transition-colors duration-700 dark:hover:bg-[#fae800] hover:bg-[#0f0f0f] hover:text-white block px-3 py-2 rounded-md text-base dark:hover:text-black' : 'text-white font-bold transition-colors duration-700 dark:hover:text-black dark:hover:bg-[#fae800] hover:bg-[#0f0f0f] hover:text-white block px-3 py-2 rounded-md text-base text-[11px]'}`}>
+
                                                 <Link href='#projects'>{t.projects}</Link>
                                             </li>
-                                            <li className="text-white font-bold transition-colors duration-700 hover:bg-[#ee3453] hover:text-white block px-3 py-2 rounded-md text-base">
+                                            <li className={`${locale === 'en' ? 'text-white font-bold transition-colors duration-700 dark:hover:bg-[#fae800] hover:bg-[#0f0f0f] hover:text-white block px-3 py-2 rounded-md text-base dark:hover:text-black' : 'text-white font-bold transition-colors duration-700 dark:hover:text-black dark:hover:bg-[#fae800] hover:bg-[#0f0f0f] hover:text-white block px-3 py-2 rounded-md text-base text-[11px]'}`}>
+
                                                 <Link href='#contact'>{t.contact}</Link>
                                             </li>
                                             <select
@@ -129,12 +140,11 @@ export default function Nav() {
                                                 className='block py-2.5 px-0 w-18 text-sm text-white bg-transparent dark:text-white  focus:outline-none focus:ring-0 peer'
                                             // className="text-white text-shadow-sm text-lg bg-transparent tracking-wide md:px-0 px-3 bg-[#9867C5]"
                                             >
-                                                <option className="text-white bg-[#ee3453] dark:bg-[#0f0f0f] hover:dark:bg-[#ee3453] hover:bg-[0f0f0f]" value="en">English</option>
-                                                <option className="text-white bg-[#ee3453]" value="ja">日本語</option>
+                                                <option className="text-white bg-[#ee3453] dark:bg-[#0f0f0f] hover:dark:bg-[#ee3453] hover:bg-[#0f0f0f]" value="en">English</option>
+                                                <option className="text-white bg-[#ee3453] dark:bg-[#0f0f0f] hover:dark:bg-[#ee3453] hover:bg-[#0f0f0f]" value="ja">日本語</option>
                                             </select>
-                                            <li className='text-white font-bold transition-colors duration-700 hover:bg-[#ee3453] hover:text-white block px-3 py-2 rounded-md text-base'>
-                                                {renderThemeChanger()}
-                                            </li>
+
+                                            <ThemeSwitcher />
                                         </div>
                                     </div>
                                 </div>
@@ -153,31 +163,27 @@ export default function Nav() {
                                 leaveTo="transform scale-95 opacity-0"
                             >
                                 <div className="px-2 pt-2 pb-3 space-y-1 ">
-                                    <li className="text-white font-bold transition-colors duration-700 hover:bg-[#ee3453] hover:text-white block px-3 py-2 rounded-md text-base">
+                                    <li className="text-white font-bold transition-colors duration-700 hover:bg-[#0f0f0f] dark:hover:bg-[#fae800] hover:text-white block px-3 py-2 rounded-md text-base">
                                         <Link href='/'>{t.home}</Link>
                                     </li>
-                                    <li className="text-white font-bold transition-colors duration-700 hover:bg-[#ee3453] hover:text-white block px-3 py-2 rounded-md text-base">
+                                    <li className="text-white font-bold transition-colors duration-700 hover:bg-[#0f0f0f] dark:hover:bg-[#fae800] hover:text-white block px-3 py-2 rounded-md text-base">
                                         <Link href='#about'>{t.about}</Link>
                                     </li>
-                                    <li className="text-white font-bold transition-colors duration-700 hover:bg-[#ee3453] hover:text-white block px-3 py-2 rounded-md text-base">
+                                    <li className="text-white font-bold transition-colors duration-700 hover:bg-[#0f0f0f] dark:hover:bg-[#fae800] hover:text-white block px-3 py-2 rounded-md text-base">
                                         <Link href='#projects'>{t.projects}</Link>
                                     </li>
-                                    <li className="text-white font-bold transition-colors duration-700 hover:bg-[#ee3453] hover:text-white block px-3 py-2 rounded-md text-base">
+                                    <li className="text-white font-bold transition-colors duration-700 hover:bg-[#0f0f0f] dark:hover:bg-[#fae800] hover:text-white block px-3 py-2 rounded-md text-base">
                                         <Link href='#contact'>{t.contact}</Link>
                                     </li>
                                     <select
                                         onChange={changeLanguage}
                                         defaultValue={locale}
-                                        className='block py-2.5 px-0 w-18 ml-2 text-sm text-white bg-transparent   dark:text-white  focus:outline-none focus:ring-0  peer'
-
+                                        className='block py-2.5 px-0 w-18 ml-2 text-sm text-white bg-transparent dark:text-white focus:outline-none focus:ring-0  peer'
                                     >
-                                        <option className="text-white bg-[#ee3453]" value="en">English</option>
-                                        <option className="text-white bg-[#ee3453]" value="ja">日本語</option>
+                                        <option className="text-white bg-[#ee3453] hover:dark:bg-[#ee3453] hover:bg-[#0f0f0f]" value="en">English</option>
+                                        <option className="text-white bg-[#ee3453] hover:dark:bg-[#ee3453] hover:bg-[#0f0f0f]" value="ja">日本語</option>
                                     </select>
-                                    <li className='text-white font-bold transition-colors duration-700 hover:bg-[#ee3453] hover:text-white block px-3 py-2 rounded-md text-base'>
-                                        {renderThemeChanger()}
-                                    </li>
-
+                                    <ThemeSwitcher />
                                 </div>
                             </Transition>
                         </Disclosure.Panel>

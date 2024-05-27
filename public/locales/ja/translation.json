@@ -1,0 +1,72 @@
+{
+    "projects": {
+        "cardData": {
+            "0": {
+                "title": "デート・ア・ライブ コミュニティボット",
+                "content": "DALコミュニティサーバーで使用されるDiscordボットで、動作するレベリング、経済、モデレーションシステムが備わっています。レベリングと経済システムは、詳細を保存するためにMongoDBを使用しています。",
+                "languages": ["Mongoose", "JavaScript", "Node", "SQLite"],
+                "features": ["経済", "レベリング", "モデレーション", "リアクションロール", "楽しい"],
+                "github": "https://github.com/necrydark/DALBot"
+            },
+            "1": {
+                "title": "マキマボット",
+                "content": "チェンソーマンコミュニティサーバーで使用されるDiscordボットで、さまざまなAPIを実装してテーマに活用し、ボットの権限とスラッシュコマンドを有効にしています。",
+                "languages": ["DiscordJS", "JavaScript", "REST", "waifu.pics", "kitsu.io"],
+                "features": [
+                    "モデレーション",
+                    "アニメ/マンガ情報",
+                    "アニメ/マンガの写真",
+                    "チケットシステム",
+                    "カスタマイズ",
+                    "アバターチェッカー"
+                ],
+                "github": "https://github.com/necrydark/makimabot"
+            },
+            "2": {
+                "title": "ポートフォリオV1",
+                "content": "NextJSとTailwind CSS、およびフォームスプリーを使用して作成された最初のバージョンのポートフォリオ。",
+                "languages": ["NextJS", "Tailwind CSS", "Formspree"],
+                "github": "https://github.com/necrydark/PortfolioV1"
+            },
+            "3": {
+                "title": "アポロ",
+                "content": "ユーザーが自分の存在状態を追跡し、進捗状況を追跡する方法を提供する精神的な健康スマートウォッチアプリのコンセプト。人々を助けるための対処方法も備えています。",
+                "languages": ["HTML", "CSS", "jQuery", "Materialize", "JavaScript"],
+                "links": "https://apollo-tau-mocha.vercel.app/",
+                "github": "https://github.com/necrydark/Apollo"
+            },
+            "4": {
+                "title": "アイドルファーム",
+                "content": "アイドルファームは、UnityエンジンとC＃を使用して作成されたアイドルゲームで、農作物を植え、動物を育て、お金を稼ぐことができる農業シミュレーターです。",
+                "languages": ["Unity", "C#", "Blender"],
+                "github": "https://github.com/necrydark/idleFarm_Clicker"
+            },
+            "5": {
+                "title": "リトル東京",
+                "content": "ASP.NET Core、C＃、SQLを使用して作成されたレストランのWebサイト。ユーザーはメニューを確認し、注文して支払うことができます",
+                "languages": ["ASP.NET Core", "C#", "SQL", "HTML", "CSS", "JavaScript", "Bootstrap"],
+                "github": "https://github.com/necrydark/littleTokyo",
+                "links": "https://2124363.win.studentwebserver.co.uk/CO5227"
+            },
+            "6": {
+                "title": "ギャツビーテスト",
+                "content": "これは、ウェブサイトを作成するために使用しているJSフレームワークをテストするものです。",
+                "languages": ["Gatsby", "Tailwind CSS"],
+                "github": "https://github.com/necrydark/gatsby-portfolio-v2"
+            },
+            "7": {
+                "title": "パワー",
+                "content": "パワーは、Discordボットのコーディング方法を学びたい初心者向けのスターターボットです。初心者に役立ついくつかのコマンドと、楽しいいくつかのコマンドがあります。",
+                "languages": ["DiscordJS", "JavaScript", "REST"],
+                "github": "https://github.com/necrydark/power"
+            },
+            "8": {
+                "title": "GCデータベース",
+                "content": "GCDatabase は私が現在取り組んでいるプロジェクトで、ゲーム「七つの大罪 グランドクロス」のデータベースです。 これは進行中の作業であり、現在 NextJS と Tailwind CSS を使用して開発されています。",
+                "languages": ["NextJS", "Tailwind CSS", "Formspree", "MongoDB"],
+                "features": ["検索", "キャラクタービルド", "チームビルディング", "アップデート", "ニュース"],
+                "github": "https://github.com/necrydark/gcdatabase"
+            }
+        }
+    }
+}

@@ -220,14 +220,12 @@ ol {
 
 .diagonal {
   --skew-angle: -5deg;
-  --background: #000;
   position: relative;
   isolation: isolate;
 }
 
 .diagonal::after {
   content: '';
-  background: var(--background);
   position: absolute;
   z-index: -1;
   inset: 0;
@@ -255,7 +253,12 @@ body .cybr-btn+.cybr-btn {
   border-bottom: var(--border) solid var(--shadow-primary);
 }
 
-
+.cyberpunk-underline {
+  --border: 2px;
+  --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
+  --shadow-primary-hue: 200;
+  border-bottom: var(--border) solid var(--shadow-primary);
+}
 
 .cybr-btn {
   --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
@@ -298,6 +301,7 @@ body .cybr-btn+.cybr-btn {
 
 .cybr-btn:hover {
   --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
+
 }
 
 .cybr-btn:active {
@@ -364,6 +368,10 @@ body .cybr-btn+.cybr-btn {
   clip-path: var(--clip);
   background: var(--primary);
   z-index: -1;
+}
+
+.cybr-btn:nth-of-type(2) {
+  --primary-hue: 260 !important;
 }
 
 @keyframes glitch {
@@ -446,6 +454,38 @@ body .cybr-btn+.cybr-btn {
   }
 }
 
-.cybr-btn:nth-of-type(2) {
-  --primary-hue: 260;
+.left-bar {
+  width: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  right: auto;
+  z-index: 10;
+  color: blue;
+}
+
+@media screen and (max-width:1080px) {
+  .left-bar {
+    left: 20px;
+    right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-bar {
+    display: none;
+  }
+}
+
+.box {
+  -webkit-box-align: center;
+}
+
+.box::after {
+  display: block;
+  height: 90px;
+  width: 1px;
+  margin: 0px auto;
+  content: '';
+
 }
